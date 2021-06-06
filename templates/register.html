@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{% static 'css/register.css' %}">
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <div id ="main">
+            <h1>Enter data for Qr</h1>
+            <div id ="form">
+                    <form action="/submit" method="post">
+                        {% csrf_token %}
+                    <h4 id="fn">First Name<input type="text" name="firstName"></h4>
+                    <h4 id="ln">Last Name<input type="text" name="lastName"></h4>
+                    <h4 id="mobile">Phone No:<input type="text" name="mobileno"></h4>
+                    <h4 id="mail">Email Id:<input type="text" name="mailid"></h4>
+                    <h4 id="gender">Gender: Male<input type="radio" name="gender" value="Male"> Female<input type="radio" name="gender" value="Female"></h4>
+                    <h3>{{msg}}</h3>
+                    <input type = "Submit" id="btn">
+                </form>
+                <div id = "h_qr">
+                    <h3 id="houtput">Qr Code Output is : </h3>
+                </div>
+                <div id="show-qr">
+                    {% if data %}
+                        <img src="{% static 'image/test.png' %}" alt="Image">
+                    {% else %}
+                        <h5>enter valid data </h5>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+        </script>
+</html>

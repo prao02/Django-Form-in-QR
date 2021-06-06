@@ -1,0 +1,38 @@
+h1{
+background-color:grey;
+}
+
+#form{
+    background-color: lightblue;
+    margin: 20px;
+    padding: 5px;
+    max-width: fit-content;
+    height: fit-content;
+}
+
+#main{
+
+    background-color:antiquewhite;
+    width: fit-content;
+    height: 550px;
+}
+
+
+#h_qr{
+    background-color: orange;
+    margin-left: 650px;
+    margin-top: -250px;
+    width: 290px;
+}
+
+#houtput{
+    text-align:center;
+    padding: 10px
+}
+
+#show_qr{
+    background-color: rgb(255, 255, 255);
+    margin-left: 650px;
+    width: 290px;
+    height: 250px;
+}
